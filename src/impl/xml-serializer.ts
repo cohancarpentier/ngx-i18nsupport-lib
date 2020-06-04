@@ -186,6 +186,7 @@ export class XmlSerializer {
                 } else if (sysid && sysid !== '.') {
                     buf.push(' SYSTEM "', sysid, '">');
                 } else {
+                    // @ts-ignore
                     var sub = documenttypeNode.internalSubset;
                     if (sub) {
                         buf.push(" [", sub, "]");
